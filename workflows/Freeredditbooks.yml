@@ -3,7 +3,7 @@ on:
     url: https://www.reddit.com/r/FreeEBOOKS+freebooks
 jobs:
   telegram:
-    name: Send a telegram message2
+    name: Send a telegram message
     runs-on: ubuntu-latest
     steps:
       - name: Send a telegram message
