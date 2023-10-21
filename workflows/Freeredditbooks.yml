@@ -1,0 +1,17 @@
+on:
+  reddit:
+    url: https://www.reddit.com/r/FreeEBOOKS+freebooks
+jobs:
+  telegram:
+    name: Send a telegram message2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send a telegram message
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          #format: html
+          message:  |
+            ${{on.reddit.outputs.title}}
+            ${{on.reddit.outputs.content}}
